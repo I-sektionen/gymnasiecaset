@@ -1,0 +1,332 @@
+/*
+	By 	Jonas Olaussen
+		info@jonasolaussen.se
+
+	1. General
+		1a. Imports
+		1b. Variabels
+		1c. Type
+	2. Layout
+		2a. Basic Layout
+		2b. Grid Layout
+	3. Page
+		3a. General Page Styles
+		3b. Hero
+		3c. Section specific
+
+	#. Specific style
+
+*/
+/* 1a. Imports */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,800);
+/* 1b. Variabels */
+/* 1c. Type */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+p {
+  line-height: 1.5em;
+  text-align: justify;
+}
+strong {
+  font-weight: bold;
+}
+a {
+  color: #333333;
+  -webkit-transition: all 500ms;
+  /* Safari */
+  transition: all 500ms;
+}
+a:hover {
+  text-decoration: none;
+}
+
+span.cprimary{
+  color: #f3d200;
+}
+
+/* ------ 2. Layout ------ */
+/* 2a. Basic Layout */
+html,
+body {
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+.toggle-nav {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 99;
+  background-image: url(img/menu-toggle-min.png);
+  background-size: 50px;
+}
+#main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+#main-nav .nav-item {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem 0;
+  border-bottom: 1px solid #5D5757;
+  color: #efefef;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 500ms;
+  /* Safari */
+  transition: all 500ms;
+}
+#main-nav .nav-item:hover {
+  background-color: #000;
+}
+#main-nav .close-nav {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* 2b. Grid Layout */
+.grid-container {
+  width: 90%;
+  margin: 0 auto;
+}
+.grid-50 {
+  float: left;
+}
+.grid-50.last {
+  margin-left: 4%;
+}
+.grid-33 {
+  float: left;
+}
+.grid-33.last {
+  margin-right: 0;
+}
+.clear {
+  clear: both;
+}
+/* ------ 3. Page Specific  ------ */
+/* 3a. General Page Styles */
+.information-section {
+  background-color: #efefef;
+  padding: 5rem 0;
+  position: relative;
+}
+.img-section {
+  height: 60%;
+  background-size: cover;
+}
+.img-section.last {
+  height: 30%;
+}
+.section-title {
+  font-size: 2.25rem;
+  text-align: center;
+  border-bottom: 3px solid #333333;
+  max-width: 400px;
+  text-align: left;
+  padding-left: 1rem;
+  margin-top: 0;
+}
+.section-text-no-title {
+  margin-top: 6.4rem;
+}
+.btn-style-1 {
+  background-color: #efefef;
+  padding: 1rem 0;
+  text-decoration: none;
+  color: #333333;
+  font-weight: 700;
+  border-bottom: 5px solid #f3d200;
+  display: block;
+  width: 225px;
+  text-align: center;
+  margin: auto;
+
+  -webkit-transition: all .5s;
+
+  /* Safari */
+  transition: all .5s;
+}
+.btn-color-light {
+  background-color: #efefef;
+  border-bottom: 5px solid #f3d200;
+}
+.btn-color-light:hover {
+  background-color: #f3d200;
+  border-bottom-color: #efefef;
+}
+.btn-color-primary {
+  background-color: #f3d200;
+  border-bottom: 5px solid #fff;
+}
+.btn-color-primary:hover {
+  color: #efefef;
+  background-color: #333333;
+  border-bottom-color: #f3d200;
+}
+.btn-color-disabled {
+  background-color: #808080;
+  border-bottom: 5px solid #fff;
+}
+.btn-color-disabled:hover {
+  background-color: #696969;
+  border-bottom: 5px solid #fff;
+}
+/* 3b. hero */
+#hero {
+  height: 75%;
+  min-height: 600px;
+  background-size: cover;
+  position: relative;
+}
+#hero .btn-group {
+  margin: 0 auto;
+  width: 225px;
+}
+#hero .btn-group .btn {
+  float: left;
+  margin: .5rem;
+}
+#hero .hero-container {
+  padding-top: 2rem;
+}
+#hero .hero-logo {
+  width: 350px;
+  display: block;
+  margin: 0 auto 0 auto;
+}
+#hero .hero-title {
+  text-align: center;
+  color: #efefef;
+  margin: 1.5rem 0 1rem 0;
+  font-size: 2rem;
+}
+#hero .tag-line {
+  text-align: center;
+  color: #efefef;
+}
+/* 3c. section specific */
+.logga {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
+.first-logga {
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+}
+.i-round-logo {
+  margin-top: 4rem;
+}
+#kontakt .btn {
+  float: left;
+}
+#footer {
+  padding: 2rem 0;
+  text-align: center;
+}
+.part-of-i {
+  background-image: url(http://gc-webb.pancakeapps.com/img/logo_iportalen-min.png);
+  padding: 25px 320px 25px 0;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+@media (min-width: 768px) {
+  #hero {
+    height: 75%;
+    min-height: 600px;
+  }
+  #hero .btn-group {
+    margin: 0 auto;
+    width: 520px;
+  }
+  #hero .btn-group .btn {
+    float: left;
+  }
+  #hero .hero-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 768px;
+    margin-top: -236px;
+    margin-left: -384px;
+  }
+  #hero .hero-logo {
+    width: 350px;
+    display: block;
+    margin: 0 auto 0 auto;
+  }
+  #hero .hero-title {
+    text-align: center;
+    color: #efefef;
+    margin: 1.5rem 0 1rem 0;
+    font-size: 3rem;
+  }
+  #hero .tag-line {
+    text-align: center;
+    color: #efefef;
+  }
+  .grid-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .grid-50 {
+    width: 48%;
+    float: left;
+  }
+  .grid-50.last {
+    margin-left: 4%;
+  }
+  .grid-33 {
+    width: 30%;
+    margin-right: 5%;
+    float: left;
+  }
+  .grid-33.last {
+    margin-right: 0;
+  }
+  .section-title {
+    font-size: 3rem;
+  }
+  .logga {
+    max-width: 100%;
+  }
+}
+/* ------ #. Specific Styles ------ */
+#hero {
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(img/hero-bg-min.jpg);
+}
+
+#img-section-0 {
+  background-image: url(img/img-section-0-min.jpg);
+}
+
+#img-section-1 {
+  background-image: url(img/img-section-1-min.jpg);
+}
+#img-section-2 {
+  background-image: url(img/img-section-2-min.jpg);
+}
+#img-section-3 {
+  background-image: url(img/img-section-3-min.jpg);
+}
+#img-section-4 {
+  background-image: url(img/img-section-4-min.jpg);
+}
+#img-section-5 {
+  background-image: url(img/img-section-5-min.jpg);
+}
+#img-section-6 {
+  background-image: url(img/img-section-6-min.jpg);
+}
+#img-section-7 {
+  background-image: url(img/img-section-7-min.jpg);
+}
